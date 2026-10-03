@@ -1,0 +1,8 @@
+* text=auto
+*.fbx binary
+*.wav binary
+*.blend binary
+*.jpg binary
+*.png binary
+*.uasset binary
+*.umap binary
