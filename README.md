@@ -32,6 +32,20 @@ placeholders; the HUD says so.
 
 Headless import, if you prefer: `UnrealEditor-Cmd GemRoller.uproject -run=pythonscript -script=Tools/ImportAssets.py`.
 
+### On a Mac
+
+1. Install **Xcode** from the App Store (the full app, not just the command-line tools), open it once and accept the licence.
+   Install **Unreal Engine 5.4 or newer** from the Epic Games Launcher (Unreal Engine tab → Library). Apple-silicon Macs are supported.
+   Epic lists the macOS/Xcode versions each engine release needs under *Hardware and Software Specifications* in its docs.
+2. `git clone https://github.com/pemense2w/somein.git && cd somein && git checkout claude/determined-newton-ikahul`
+3. Optional but recommended: run `Tools/mac_build.sh` in Terminal. It builds the C++ and prints any compiler error, which is
+   much clearer than the editor's "could not be compiled" dialog. Then double-click `GemRoller.uproject`
+   (if the engine version differs, right-click it → *Services → Switch Unreal Engine version…*).
+4. In the editor: **Tools → Execute Python Script…** → `Tools/ImportAssets.py`.
+   (Or in the Output Log's command box: `py "/full/path/to/somein/Tools/ImportAssets.py"`.)
+5. Open `Content/GemRoller/Maps/Arena`, press **Play**, and click inside the viewport so it captures the mouse.
+   `Esc` stops Play. The first launch compiles shaders for a few minutes (bottom-right progress); later launches are quick.
+
 ## Controls
 
 | | Keyboard + mouse | Gamepad |
